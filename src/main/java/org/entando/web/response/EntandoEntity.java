@@ -1,8 +1,9 @@
 package org.entando.web.response;
 
 /**
- * @deprecated use {@link SimpleRestResponse} instead
- * @param <T>
+ * Don't use this.
+ *
+ * @deprecated use {@link SimpleRestResponse} instead.
  */
 @Deprecated
 public class EntandoEntity<T> extends SimpleRestResponse<T> {
@@ -14,6 +15,5 @@ public class EntandoEntity<T> extends SimpleRestResponse<T> {
     public EntandoEntity() {
         super();
     }
-
 
 }

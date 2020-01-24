@@ -1,5 +1,7 @@
 package org.entando.test.controller;
 
+import java.util.Arrays;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.entando.test.model.MockModel;
@@ -16,9 +18,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
-import java.util.List;
-
 @Slf4j
 @RestController
 @RequestMapping("/test")
@@ -28,7 +27,7 @@ public class TestMockController {
     private static final String JSON = MediaType.APPLICATION_JSON_VALUE;
 
     @GetMapping(path = "", produces = JSON)
-    public PagedRestResponse<MockModel> list(PagedListRequest request)  {
+    public PagedRestResponse<MockModel> list(PagedListRequest request) {
         final List<MockModel> list = new MockModelListProcessor(request, Arrays.asList(
                 new MockModel("John", "Doe", false, 31),
                 new MockModel("Ryan", "Reynolds", true, 35)
@@ -40,7 +39,7 @@ public class TestMockController {
     }
 
     @GetMapping(path = "/single", produces = JSON)
-    public SimpleRestResponse<MockModel> single()  {
+    public SimpleRestResponse<MockModel> single() {
         return new SimpleRestResponse<>(new MockModel("John", "Doe", false, 31));
     }
 

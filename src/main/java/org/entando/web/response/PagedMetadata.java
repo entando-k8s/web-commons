@@ -1,17 +1,16 @@
 package org.entando.web.response;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
-import org.entando.web.request.Filter;
-import org.entando.web.request.PagedListRequest;
+import static java.util.Optional.ofNullable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-
-import static java.util.Optional.ofNullable;
+import lombok.Data;
+import org.entando.web.request.Filter;
+import org.entando.web.request.PagedListRequest;
 
 @Data
 public class PagedMetadata<T> {
@@ -38,7 +37,8 @@ public class PagedMetadata<T> {
     }
 
     /**
-     * Constructor to build PagedMetadata using a trimmed body
+     * Constructor to build PagedMetadata using a trimmed body.
+     *
      * @param req the page request
      * @param body the trimmed body list
      * @param totalItems the full body size
@@ -50,7 +50,8 @@ public class PagedMetadata<T> {
     }
 
     /**
-     * Constructor to build PagedMetadata by trimming the full body
+     * Constructor to build PagedMetadata by trimming the full body.
+     *
      * @param req the page request
      * @param fullBody the full body list
      */

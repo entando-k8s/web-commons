@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~
+  ~ Copyright 2015-Present Entando Inc. (http://www.entando.com) All rights reserved.
+  ~
+  ~ This library is free software; you can redistribute it and/or modify it under
+  ~ the terms of the GNU Lesser General Public License as published by the Free
+  ~ Software Foundation; either version 2.1 of the License, or (at your option)
+  ~ any later version.
+  ~
+  ~  This library is distributed in the hope that it will be useful, but WITHOUT
+  ~ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  ~ FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+  ~ details.
+  ~
+  -->
+
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    <suppress>
+        <notes><![CDATA[
+        Most of these CVEs go on about being used with Spring 5.0.5. We are using 5.2.1
+      ]]></notes>
+        <gav regex="true">org\.springframework\.security:spring-security-.*:5\.2\.1\.RELEASE</gav>
+        <cve>CVE-2018-1258</cve>
+        <cve>CVE-2011-2731</cve>
+        <cve>CVE-2011-2732</cve>
+        <cve>CVE-2012-5055</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+        Most of these CVEs go on about being used with Spring 5.0.5. We are using 5.2.1
+      ]]></notes>
+        <gav regex="true">org\.springframework\.security:spring-security-rsa:1\.0\.9\.RELEASE</gav>
+        <cve>CVE-2011-2731</cve>
+        <cve>CVE-2011-2732</cve>
+        <cve>CVE-2012-5055</cve>
+        <cve>CVE-2018-1258</cve>
+    </suppress>
+</suppressions>

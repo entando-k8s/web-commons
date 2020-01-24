@@ -1,5 +1,8 @@
 package org.entando.web.swagger;
 
+import static java.util.Collections.emptyList;
+import static java.util.Optional.ofNullable;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -8,12 +11,10 @@ import org.springframework.stereotype.Component;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 
-import static java.util.Collections.emptyList;
-import static java.util.Optional.ofNullable;
-
 @Slf4j
 @Component
-@Getter@Setter
+@Getter
+@Setter
 @ConfigurationProperties(prefix = "swagger.info")
 public class SwaggerInfo {
 

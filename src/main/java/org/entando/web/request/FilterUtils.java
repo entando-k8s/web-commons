@@ -1,8 +1,5 @@
 package org.entando.web.request;
 
-import org.apache.commons.collections4.Transformer;
-import org.apache.commons.collections4.comparators.TransformingComparator;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -14,8 +11,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import org.apache.commons.collections4.Transformer;
+import org.apache.commons.collections4.comparators.TransformingComparator;
 
 public class FilterUtils {
+
     private FilterUtils() {
     }
 
@@ -62,17 +62,17 @@ public class FilterUtils {
         boolean result = false;
 
         while (iterator.hasNext()) {
-            boolean filterValue = (Boolean)iterator.next();
-            switch(operator) {
-            case EQUAL:
-            case LIKE:
-                result |= value == filterValue;
-                break;
-            case NOT_EQUAL:
-                result |= value != filterValue;
-                break;
-            default:
-                throw new UnsupportedOperationException(getUnsupportedOperatorMessage(filter));
+            boolean filterValue = (Boolean) iterator.next();
+            switch (operator) {
+                case EQUAL:
+                case LIKE:
+                    result |= value == filterValue;
+                    break;
+                case NOT_EQUAL:
+                    result |= value != filterValue;
+                    break;
+                default:
+                    throw new UnsupportedOperationException(getUnsupportedOperatorMessage(filter));
             }
         }
 

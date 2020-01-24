@@ -4,7 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import springfox.documentation.service.Contact;
 
-@Getter@Setter
+@Getter
+@Setter
 public class SwaggerContact {
 
     private String name;

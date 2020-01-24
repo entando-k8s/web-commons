@@ -1,9 +1,8 @@
 package org.entando.web.request;
 
+import java.util.List;
 import lombok.Data;
 import org.apache.commons.lang3.ArrayUtils;
-
-import java.util.List;
 
 @Data
 public class PagedListRequest {
@@ -42,7 +41,7 @@ public class PagedListRequest {
         } else if (0 == this.getPage() || master.isEmpty()) {
             return master;
         } else {
-            if (null  == pageSize) {
+            if (null == pageSize) {
                 this.setPageSize(PAGE_SIZE_DEFAULT);
             }
             final int offset = this.getOffset();

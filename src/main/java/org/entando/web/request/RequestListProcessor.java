@@ -1,13 +1,13 @@
 package org.entando.web.request;
 
+import static java.util.Optional.ofNullable;
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import static java.util.Optional.ofNullable;
 
 public abstract class RequestListProcessor<T> {
 
@@ -34,7 +34,8 @@ public abstract class RequestListProcessor<T> {
             for (final Filter filter : filters) {
                 final String filterAttribute = filter.getAttribute();
                 final String filterValue = filter.getValue();
-                if (filterAttribute != null && !filterAttribute.isEmpty() && (filterValue != null && !filterValue.isEmpty() || filter.getAllowedValues() != null && filter.getAllowedValues().length > 0)) {
+                if (filterAttribute != null && !filterAttribute.isEmpty() && (filterValue != null && !filterValue.isEmpty()
+                        || filter.getAllowedValues() != null && filter.getAllowedValues().length > 0)) {
                     final Predicate<T> predicate = predicatesProvider.apply(filter);
                     if (null != predicate) {
                         this.stream = this.stream.filter(predicate);

@@ -4,24 +4,24 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class BaseMapModel {
+
     @JsonAnySetter
-    protected Map<String,Object> data = new HashMap<>();
+    protected Map<String, Object> data = new HashMap<>();
 
-    @JsonAnyGetter
-    public Map<String,Object> getData() {
-        return data;
-    }
-
-    public BaseMapModel(Map<String,Object> map) {
+    public BaseMapModel(Map<String, Object> map) {
         data = map == null ? new HashMap<>() : new HashMap<>(map);
     }
 
-    public void putAll(Map<String,Object> map) {
+    @JsonAnyGetter
+    public Map<String, Object> getData() {
+        return data;
+    }
+
+    public void putAll(Map<String, Object> map) {
         data.putAll(map);
     }
 }

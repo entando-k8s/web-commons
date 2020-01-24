@@ -1,14 +1,14 @@
 package org.entando.web.response;
 
-import lombok.Getter;
-import lombok.Setter;
+import static java.util.Optional.ofNullable;
 
 import java.util.HashMap;
 import java.util.Map;
+import lombok.Getter;
+import lombok.Setter;
 
-import static java.util.Optional.ofNullable;
-
-@Getter@Setter
+@Getter
+@Setter
 public class SimpleRestResponse<T> extends RestResponse<T, Map<String, Object>> {
 
     public SimpleRestResponse(final T payload) {

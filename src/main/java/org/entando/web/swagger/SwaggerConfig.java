@@ -1,9 +1,12 @@
 package org.entando.web.swagger;
 
-import org.entando.web.exception.ErrorResponse;
-import org.entando.web.exception.ValidationErrorResponse;
+import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
+
 import com.fasterxml.classmate.TypeResolver;
 import lombok.extern.slf4j.Slf4j;
+import org.entando.web.exception.ErrorResponse;
+import org.entando.web.exception.ValidationErrorResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -20,10 +23,6 @@ import springfox.documentation.service.ResponseMessage;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
-import static java.util.Arrays.asList;
-import static java.util.Collections.singletonList;
-
 
 @Slf4j
 @Configuration

@@ -14,7 +14,7 @@ public class PagedListRequestDataUtils {
         return PageRequest.of(request.getPage() - 1, request.getPageSize(), sort);
     }
 
-//    public static <T> Specification<T> toSpecification(final PagedListRequest request, Class<T> clazz) {
-//    }
+    //    public static <T> Specification<T> toSpecification(final PagedListRequest request, Class<T> clazz) {
+    //    }
 
 }

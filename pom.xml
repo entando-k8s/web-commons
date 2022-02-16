@@ -47,7 +47,7 @@
         <!--dependencies -->
         <okhttp.version>3.12.1</okhttp.version>
         <liquibase.version>3.8.5</liquibase.version>
-        <postgresql.driver.version>42.2.8</postgresql.driver.version>
+        <postgresql.driver.version>42.3.3</postgresql.driver.version>
         <resteasy.version>3.9.3.Final</resteasy.version>
         <keycloak.version>7.0.1</keycloak.version>
         <jackson.version>2.10.1</jackson.version>
